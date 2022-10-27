@@ -19,7 +19,9 @@ class TrafficAnalyzer:
 	def recv_pkt(self, packet):
 		# callback for whenever a packet is received
 		if not hasattr(packet[0][1], "sport"):
-			print("THIS PACKET HAS NO SPORT: src", packet[0][1].src)
+			print("THIS PACKET HAS NO SPORT")
+			print("src: ", packet[0][1].src)
+			print("dport: ", packet[0][1].dport)
 			exit(-1)
 		src, sport, dport, length, time = packet[0][1].src, packet[0][1].sport, packet[0][1].dport, packet[0][1].len, packet[0][1].time
 		if "192.168.1.239" == src:
