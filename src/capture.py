@@ -76,4 +76,4 @@ class TrafficAnalyzer:
 			print(k, self.flows[k][1]/(10**6), last_n)
 
 	def run_sniffer(self):
-		sniff(iface="enp0s3", filter="ip", prn=self.recv_pkt, count=-1, store=0)
+		sniff(iface="wlan0", filter="ip", prn=self.recv_pkt, count=-1, store=0)
