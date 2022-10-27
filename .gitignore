@@ -7,3 +7,5 @@
 /exps/~/*
 /plots/data/*
 /plots/crab_data.tar.gz
+__pycache__/
+*log.txt
